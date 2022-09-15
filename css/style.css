@@ -1,0 +1,1100 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&family=Nunito:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/******* navbar styling *******/
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding: 6.5px 0;
+    background: linear-gradient(150deg, rgba(143, 110, 213, 0.89) 15%, rgba(40, 20, 131, 0.76) 70%, rgba(215, 130, 217, 0.74) 94%);;
+    // background: linear-gradient(150deg, rgba(40, 20, 131, 0.76) 15%, rgba(143, 110, 213, 0.89) 70%, rgba(215, 130, 217, 0.74) 94%);;
+}
+
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 23px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+    color: #5c27fe;
+}
+
+.navbar.sticky .menu li a:hover{
+    color: #5c27fe;
+}
+
+/******* menu btn styling *******/
+
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/******* home section styling *******/
+
+.home{
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(#c165dd, #5c27fe);
+    clip-path:polygon(0% 0%, 0% 82.5%, 1.69492% 84.3293%, 3.38983% 86.1385%, 5.08475% 87.9078%, 6.77966% 89.6179%, 8.47458% 91.25%, 10.1695% 92.7862%, 11.8644% 94.2098%, 13.5593% 95.505%, 15.2542% 96.6578%, 16.9492% 97.6555%, 18.6441% 98.487%, 20.339% 99.1435%, 22.0339% 99.6176%, 23.7288% 99.9041%, 25.4237% 100%, 27.1186% 99.9041%, 28.8136% 99.6176%, 30.5085% 99.1435%, 32.2034% 98.487%, 33.8983% 97.6555%, 35.5932% 96.6578%, 37.2881% 95.505%, 38.9831% 94.2098%, 40.678% 92.7862%, 42.3729% 91.25%, 44.0678% 89.6179%, 45.7627% 87.9078%, 47.4576% 86.1385%, 49.1525% 84.3293%, 50.8475% 82.5%, 52.5424% 80.6708%, 54.2373% 78.8616%, 55.9322% 77.0922%, 57.6271% 75.3821%, 59.322% 73.75%, 61.017% 72.2138%, 62.7119% 70.7902%, 64.4068% 69.495%, 66.1017% 68.3422%, 67.7966% 67.3446%, 69.4915% 66.513%, 71.1864% 65.8565%, 72.8814% 65.3824%, 74.5763% 65.0959%, 76.2712% 65%, 77.9661% 65.0959%, 79.661% 65.3824%, 81.3559% 65.8565%, 83.0509% 66.513%, 84.7458% 67.3446%, 86.4407% 68.3422%, 88.1356% 69.495%, 89.8305% 70.7902%, 91.5254% 72.2138%, 93.2203% 73.75%, 94.9153% 75.3821%, 96.6102% 77.0922%, 98.3051% 78.8616%, 100% 80.6708%, 100% 0%); shape-outside: polygon(0% 0%, 0% 82.5%, 1.69492% 84.3293%, 3.38983% 86.1385%, 5.08475% 87.9078%, 6.77966% 89.6179%, 8.47458% 91.25%, 10.1695% 92.7862%, 11.8644% 94.2098%, 13.5593% 95.505%, 15.2542% 96.6578%, 16.9492% 97.6555%, 18.6441% 98.487%, 20.339% 99.1435%, 22.0339% 99.6176%, 23.7288% 99.9041%, 25.4237% 100%, 27.1186% 99.9041%, 28.8136% 99.6176%, 30.5085% 99.1435%, 32.2034% 98.487%, 33.8983% 97.6555%, 35.5932% 96.6578%, 37.2881% 95.505%, 38.9831% 94.2098%, 40.678% 92.7862%, 42.3729% 91.25%, 44.0678% 89.6179%, 45.7627% 87.9078%, 47.4576% 86.1385%, 49.1525% 84.3293%, 50.8475% 82.5%, 52.5424% 80.6708%, 54.2373% 78.8616%, 55.9322% 77.0922%, 57.6271% 75.3821%, 59.322% 73.75%, 61.017% 72.2138%, 62.7119% 70.7902%, 64.4068% 69.495%, 66.1017% 68.3422%, 67.7966% 67.3446%, 69.4915% 66.513%, 71.1864% 65.8565%, 72.8814% 65.3824%, 74.5763% 65.0959%, 76.2712% 65%, 77.9661% 65.0959%, 79.661% 65.3824%, 81.3559% 65.8565%, 83.0509% 66.513%, 84.7458% 67.3446%, 86.4407% 68.3422%, 88.1356% 69.495%, 89.8305% 70.7902%, 91.5254% 72.2138%, 93.2203% 73.75%, 94.9153% 75.3821%, 96.6102% 77.0922%, 98.3051% 78.8616%, 100% 80.6708%, 100% 0%);
+    min-height: 500px;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+
+.home .home-content .text-1{
+    font-weight: 600;
+    font-size: 40px;
+    text-align: left;
+    margin-top: 100px;
+    margin-left: -120px;
+}
+.home .home-content .text-2{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: -120px;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    font-size: 23px;
+    padding: 7px 25px;
+    margin-top: 25px;
+    margin-left: -117px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    transition: all 0.6s ease;
+    word-spacing: 1.5 rem;
+}
+
+.home .home-content a:hover{
+    color: #fff;
+    background: none;
+}
+.photo img{
+    margin-left: 680px;
+    margin-top: -270px;
+}
+
+.icon{
+    margin-top: -130px;
+}
+
+ .icon a{
+    color: #fff;
+    font-size: 37px;
+    margin-left: 70px;
+}
+
+.icon-1{
+    margin-top: -50px;
+}
+
+.icon-1 a{
+    color: #fff;
+    font-size: 37px;
+    margin-left: 125px;
+}
+/******* Emoji section *******/
+
+.easy{
+    margin-left: 20px;
+    height: 100%;
+    width: 20%;
+    padding: 30px;
+    border-radius: 3px;
+    background-color: gainsboro;
+    font-family: 'Maven Pro', sans-serif;
+}
+.emoji{
+    font-size: 30px;
+    color: #c165dd;
+    margin-left: 70px;
+}
+
+.heading{
+    margin: 5px;
+    color: #000;
+    text-align: center;
+}
+
+p{
+    color: #808080;
+    text-align: justify;
+}
+
+.design{
+    margin-left: 310px;
+    margin-top: -200px;
+    height: 20%;
+    width: 21%;
+    padding: 35px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+    background-color: gainsboro;
+}
+
+i{
+    font-size: 30px;
+    text-align: justify;
+    margin-left: 70px;
+    color: #5c27fe;
+}
+
+.customize{
+    margin-left: 610px;
+    margin-top: -190px;
+    height: 20%;
+    width: 21%;
+    padding: 35px;
+    border-radius: 3px;
+    font-family: 'Maven Pro', sans-serif;
+    background-color: gainsboro;
+}
+
+.support{
+    margin-left: 910px;
+    margin-top: -190px;
+    height: 100%;
+    width: 21%;
+    padding: 30px;
+    border-radius: 3px;
+    font-family: 'Maven Pro', sans-serif;
+    background-color: gainsboro;
+}
+
+.headphone{
+    font-size: 30px;
+    color: #c165dd;
+    margin-left: 70px;
+}
+
+/******* Features section *******/
+
+section{
+    padding: 100px;
+}
+
+.features{
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(150deg, rgba(40, 20, 131, 0.76) 15%, rgba(143, 110, 213, 0.89) 70%, rgba(215, 130, 217, 0.74) 94%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 93%, 0% 100%);
+}
+
+.features .title{
+    color: #fff;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: -60px;
+    padding-bottom: 60px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.features .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    transform: translateX(-90px);
+}
+
+.features .title::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    background: #fff;
+    transform: translateX(-50px);
+}
+
+.features .features-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.features .par{
+    text-align: center;
+    color: #fff;
+}
+
+.par{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: -50px;     
+}
+
+.features .features-content .ios{
+    width: 45%;
+}
+
+.features .features-content .ios img{
+    margin-top: 30px;
+    margin-left: -100px;
+    height: 338px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.features .features-content .right{
+    width: 50%;
+}
+
+.features .features-content .right .par-1{
+    margin-top: -80px;
+    text-align:justify;
+    font-size: 25px;
+    color: #fff;
+}
+
+.features .features-content .right .par-2{
+    margin-top:20px;
+    text-align:justify;
+    font-size: 20px;
+    color: #fff;
+}
+
+/******* Pricing Plan Section *******/
+
+.basic{
+    background-color: gainsboro;
+    height: 370px;
+    width: 27%;
+    border-radius: 5px;
+    margin: 40px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.title{
+    text-align: center;
+    font-size: 37px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.par-3{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+
+.basic h4{
+    color: #2c3e50;
+    text-align: center;
+    font-size: 25px;
+    margin: 12px;
+    top: -30px;
+    
+}
+
+.inv{
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 110px;
+    bottom: 20px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.content{
+    color: #808080;
+    margin: 50px;
+    margin-left: 110px;
+}
+
+.content .icon-sign{
+    position: relative;
+    font-size: 30px;
+    top: -15px;
+}
+
+.content .min-price{
+    font-size: 50px;
+}
+
+.content .sub-price{
+    font-size: 30px;
+}
+
+.content .main-price-info{
+    font-size: 22px;
+    top: 5px;
+    position: relative;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.softo-btn-outline{
+    width: 240px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #5528dd;
+    margin-top: 40px;
+    margin-left: 35px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #000; 
+    transition:all 0.3s ease-in;
+}
+
+.softo-btn-outline:hover{
+    background: linear-gradient(150deg, rgba(40, 20, 131, 0.76) 15%, rgba(143, 110, 213, 0.89) 70%, rgba(215, 130, 217, 0.74) 94%);
+    color: #fff;
+    border: none;
+}
+
+.premium{
+    margin-left: 380px;
+    margin-top: -410px;
+}
+
+.premium .basic{
+    background-color: gainsboro;
+    height: 370px;
+    width: 42%;
+    border-radius: 5px;
+    margin: 40px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.premium .basic h4{
+    color: #2c3e50;
+    text-align: center;
+    font-size: 25px;
+    margin: 12px;
+    top: -30px;        
+}
+
+.content-1{
+    color: #808080;
+    margin: 50px;
+    margin-left: 90px;
+}
+
+.content-1 .icon-sign{
+    position: relative;
+    font-size: 30px;
+    top: -15px;
+}
+
+.content-1 .min-price{
+    font-size: 50px;
+}
+
+.content-1 .sub-price{
+    font-size: 30px;
+}
+
+.content-1 .main-price-info{
+    font-size: 22px;
+    top: 5px;
+    position: relative;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.softo-btn-outline-1{
+    width: 240px;
+    height: 40px;
+    background: linear-gradient(150deg, rgba(40, 20, 131, 0.76) 15%, rgba(143, 110, 213, 0.89) 70%, rgba(215, 130, 217, 0.74) 94%);
+    border: none;
+    margin-top: 40px;
+    margin-left: 35px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff; 
+    transition:all 0.3s ease-in;
+}
+
+.softo-btn-outline-1:hover{
+    background: #fff;
+    color: #000;
+    border: 2px solid #5528dd;
+}
+
+
+.ultimate{
+    margin-left: 775px;
+    margin-top: -410px;
+}
+
+.ultimate .basic{
+    background-color: gainsboro;
+    height: 370px;
+    width: 90%;
+    border-radius: 5px;
+    margin: 40px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.ultimate .basic h4{
+    color: #2c3e50;
+    text-align: center;
+    font-size: 25px;
+    margin: 12px;
+    top: -30px;        
+}
+
+.content-2{
+    color: #808080;
+    margin: 50px;
+    margin-left: 90px;
+}
+
+.content-2 .icon-sign{
+    position: relative;
+    font-size: 30px;
+    top: -15px;
+}
+
+.content-2 .min-price{
+    font-size: 50px;
+}
+
+.content-2 .sub-price{
+    font-size: 30px;
+}
+
+.content-2 .main-price-info{
+    font-size: 22px;
+    top: 5px;
+    position: relative;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.softo-btn-outline-2{
+    width: 240px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #5528dd;
+    margin-top: 40px;
+    margin-left: 35px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #000; 
+    transition: .4s ease-in;
+}
+
+.softo-btn-outline-2:hover{
+    background: linear-gradient(150deg, rgba(40, 20, 131, 0.76) 15%, rgba(143, 110, 213, 0.89) 70%, rgba(215, 130, 217, 0.74) 94%);
+    color: #fff;
+    border: none;
+}
+
+/******* Trust US Section *******/
+
+.expert{
+    margin-bottom: -40px;
+    height: 400px;
+    width: 100%;
+    background: linear-gradient(rgba(215, 130, 217, 0.74) 50%, rgba(143, 110, 213, 0.89) 94%);
+    border-radius: 7px;
+}
+
+.par-4{
+    margin: 10px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.par-5{
+    font-weight: 100;
+    margin: 5px 600px;
+    padding: 20px;
+    font-size: 17px;
+    text-align: justify;
+    background: #fff;
+    margin-left: 110px;
+    margin-top: -15px;
+}
+
+.coma{
+    margin-left: 45px;
+}
+
+.box-1{
+    margin-left: 490px;
+    margin-top: -148px;
+    width: 60%;
+}
+
+.par-6{
+    font-weight: 100;
+    margin: 10px 157px;
+    padding: 20px;
+    font-size: 17px;
+    text-align: justify;
+    background: #fff;
+    margin-left: 110px;
+    margin-top: -15px;
+}
+
+.coma-1{
+    margin-left: 45px;
+}
+
+.box-2{
+    margin: 5px 700px;
+    margin-left: 140px;
+    margin-top: 20px;
+}
+
+.client{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.client img{
+    width: 66px !important;
+    height: 66px;
+    border-radius: 100px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66px;
+    flex: 0 0 66px;
+    -webkit-box-shadow: 0 1px 2px rgb(212 212 212 / 35%);
+    box-shadow: 0 1px 2px rgb(212 212 212 / 35%);
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.client h6{
+    font-size: larger;
+}
+
+.client span{
+    color: #fff;
+}
+
+.box-3{
+    margin-left: 640px;
+    margin-top: -70px;
+}
+
+.client-1{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.client-1 img{
+    width: 66px !important;
+    height: 66px;
+    border-radius: 100px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66px;
+    flex: 0 0 66px;
+    -webkit-box-shadow: 0 1px 2px rgb(212 212 212 / 35%);
+    box-shadow: 0 1px 2px rgb(212 212 212 / 35%);
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+}
+
+.client-1 h6{
+    font-size: larger;
+}
+
+.client-1 span{
+    color: #fff;
+}
+
+/******* NEWS Section *******/
+
+.news{
+    background-color: rgb(247, 247, 247);
+}
+
+.title-1{
+    margin-top: -45px;
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+}
+
+.par-9{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+/* 1st BOX */
+.news .update .box-4{
+    width: 30%;
+}
+
+.news .update .box-4 img{
+    margin-top: 30px;
+    margin-left: -40px;
+    height: 200px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.news .update .box-4 h4{
+    color: #000;
+    font-size: 20px;
+    margin: 7px -20px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+// .news .update .box-4 .par-10{
+//     margin-left: -25px;
+//     text-align: justify;
+// }
+
+.headline .par-10{
+    margin: 5px -25px;
+    font-size: 17px;
+    height: 100%;
+    width: 90%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.headline a{
+    margin: 10px -25px;
+    font-size: 17px;
+    transition: all 0.3s ease-in;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.headline a:hover{
+    color: #3898db;
+}
+
+/* 2nd BOX*/
+
+.version{
+    margin-top: -193px;
+}
+
+.news .update .box-5{
+    width: 30%;
+}
+
+.news .update .box-5 img{
+    margin-top: -600px;
+    margin-left: 400px;
+    height: 200px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.news .update .version .box-5 h3{
+    color: #000;
+    height: 100%;
+    width: 100%;
+    margin-left: 400px;
+    font-size: 20px;
+    text-align: center;
+    // margin: 7px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.headline-1 .par-11{
+    font-size: 17px;
+    height: 100%;
+    width: 90%;
+    margin: 6px;
+    margin-left: 400px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.headline-1 a{
+    margin: 20px -2px;
+    height: 50%;
+    width: 50%;
+    // margin-left: 300px;
+    font-size: 17px;
+    transition: all 0.3s ease-in;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.headline-1 .par-11 a:hover{
+    color: #3898db;
+}
+
+/* 3rd Box */
+
+.version-1{
+    margin-top: -193px;
+}
+
+.news .update .box-6{
+    width: 30%;
+}
+
+.news .update .box-6 img{
+    margin-top: -600px;
+    margin-left: 830px;
+    height: 200px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.news .update .version-1 .box-6 h3{
+    color: #000;
+    height: 100%;
+    width: 400px;
+    margin-left: 830px;
+    font-size: 20px;
+    // text-align: center;
+    // margin: 7px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+// .news .update .box-4 .par-10{
+//     margin-left: -25px;
+//     text-align: justify;
+// }
+
+.headline-2 .par-12{
+    font-size: 17px;
+    height: 100%;
+    width: 90%;
+    // margin: 6px;
+    margin-left: 830px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.headline-2 a{
+    margin: 20px -2px;
+    height: 50%;
+    width: 50%;
+    // margin-left: 300px;
+    font-size: 17px;
+    transition: all 0.3s ease-in;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.headline-2 .par-12 a:hover{
+    color: #3898db;
+}
+
+/******* Contact Section *******/
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(150deg, rgba(40, 20, 131, 0.76) 15%, rgba(143, 110, 213, 0.89) 70%, rgba(215, 130, 217, 0.74) 94%);
+    box-sizing: border-box;
+    font-family: 'Baloo Bhai 2', sans-serif;
+    clip-path: polygon(evenodd, 0% 10%, 10.54% 7.27%, 21.38% 8.4%, 36.78% 10%, 68.73% 7.14%, 100% 2.5%, 100% 100%, 0% 100%);
+}
+
+.container{
+    width: 80%;
+    padding: 20px;
+}
+
+.container h2{
+    width: 100%;
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px; 
+}
+.par-7{
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+}
+
+.container .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+
+.container .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s ease;
+}
+
+.container .row100 .inputbox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+
+.container .row100 .inputbox input,
+.container .row100 .inputbox.textarea textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+
+.container .row100 .inputbox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s ease;
+    pointer-events: none;
+}
+
+.container .row100 .inputbox input:focus + .text,
+.container .row100 .inputbox input:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+
+.container .row100 .inputbox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s ease;
+    border-radius: 2px;
+    pointer-events: none;
+
+}
+
+.container .row100 .inputbox input:focus ~ .line,
+.container .row100 .inputbox input:valid ~ .line{
+    height: 100%;
+
+}
+
+.container .row100 .inputbox.textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+
+}
+
+.container .row100 .inputbox.textarea textarea{
+    height: 100%;
+    resize: none;
+}
+
+.container .row100 .inputbox textarea:focus + .text,
+.container .row100 .inputbox textarea:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+
+.container .row100 .inputbox textarea:focus ~ .line,
+.container .row100 .inputbox textarea:valid ~ .line{
+    height: 100%;
+}
+
+input[type="submit"]{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    border-radius: 2px;
+    border: 2px solid #5528dd;
+    transition: .3s ease-in;
+}
+
+input[type="submit"]:hover{
+    background: linear-gradient(150deg, rgba(40, 20, 131, 0.76) 15%, rgba(143, 110, 213, 0.89) 70%, rgba(215, 130, 217, 0.74) 94%);
+    color: #fff;
+    border: none;
+}
+
+.footer-col h4{
+    font-size: 30px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: -30px;
+    font-weight: 500;
+    margin-left: 730px;
+}
+
+.footer-col .social-links a{
+    left: 587px;
+    top: 30px;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background: #24262b;
+    margin: 10px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.btn i{
+    margin-left: 3px;
+    line-height: 60px;
+    font-size: 26px;
+    transition: 0.3 linear;
+    color: #3898db;
+}
+
+.btn:hover i{
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3898db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.btn:hover::before{
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10; 
+}
+
+@keyframes aaa {
+    0%{
+        left: -110%;
+        top: 90%;
+    }50%{
+        left: 10%;
+        top: -30%;
+    }100%{
+        top: -10%;
+        left: -10%;
+    }
+}
+
+.head{
+    margin-left: -100px;
+    margin-top: -100px;
+    font-weight: 100;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.par-8{
+    color: #fff;
+}
+
+.phone{
+    margin: 9px;
+    margin-left: -70px;
+}
+
+i{
+    font-size: 17px;
+}
+
+.mail{
+    margin: 9px;
+    margin-left: -70px;
+}
+
+/******* Copyright Section *******/
+
+footer{
+    margin-top: -974px;
+}
+
+.footer {
+    margin-top: 900px;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    color: darkgreen;
+}
